@@ -1,0 +1,101 @@
+h1 {
+    font-size: 20pt;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-transform: lowercase;
+}
+
+h2 {
+   
+    font-size: 15pt;
+    font-weight: bold;
+}
+
+article li{
+    list-style-type: square;
+}
+
+img {
+
+    width: 100%;
+    border: 1px solid gray;
+    padding: 3px;
+   
+}
+/*oldalszerkezet kialakitása*/
+
+header, nav, aside, article, footer{
+    border: 1px solid gray;
+    padding: 10px;
+}
+
+*{
+    box-sizing: border-box;
+    /*Az elemszélességébe beleszámit a padding és a border is*/
+}
+
+main{
+    width: 80%;
+    margin: 0 auto;/*Kőzépre igazítás*/
+/*text-align: center; a szöveg középre igazítása*/    
+
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    grid-template-areas:
+       "h h h h"
+       "n n n n" 
+       "as ar ar ar"
+       "f f f f "
+       ;
+       grid-gap: 10px;
+}
+
+header {
+    grid-area: h;
+}
+
+nav {
+    grid-area: n;
+}
+
+aside{
+    grid-area: as;
+    
+}
+
+article{
+    grid-area: ar;
+    
+}
+
+footer{
+    grid-area: f;
+}
+
+/*menű kialakitása*/
+
+nav li {
+    list-style-type: none;
+    
+}
+
+nav ul{
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: 100px 100px;
+    grid-gap: 2px;
+}
+
+nav a {
+    text-decoration: none;
+    background-color: orangered;
+    text-align: center;
+    display: block;
+    border-radius:10px;
+    
+}
+
+nav a:hover{
+    background-color: green;
+    color: bisque
+}
